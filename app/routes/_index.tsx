@@ -5,6 +5,6 @@ export function meta() {
 	];
 }
 
-export default function Home() {
+export default function Page() {
 	return <code>App</code>;
 }
