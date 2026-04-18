@@ -6,6 +6,7 @@
 		"build": "react-router build",
 		"dev": "react-router dev",
 		"start": "react-router-serve ./build/server/index.js",
+		"format": "prettier . --write",
 		"lint": "eslint . --fix",
 		"typecheck": "react-router typegen && tsc",
 		"prepare": "husky || true",
@@ -50,6 +51,7 @@
 		"@types/node": "^22",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
+		"canvas": "^3.2.3",
 		"eslint": "^9.39.4",
 		"eslint-import-resolver-typescript": "^4.4.4",
 		"eslint-plugin-import": "^2.32.0",
@@ -69,6 +71,7 @@
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.58.2",
 		"vite": "^8.0.3",
-		"vitest": "^4.1.4"
+		"vitest": "^4.1.4",
+		"vitest-axe": "^0.1.0"
 	}
 }
