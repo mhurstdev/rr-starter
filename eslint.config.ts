@@ -9,7 +9,12 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig([
 	{
-		ignores: ['build/**', 'node_modules/**', '.react-router/**'],
+		ignores: [
+			'build/**',
+			'build-storybook/**',
+			'node_modules/**',
+			'.react-router/**',
+		],
 	},
 	{
 		languageOptions: {

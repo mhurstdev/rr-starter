@@ -1,4 +1,5 @@
 build/
+build-storybook/
 node_modules/
 .react-router/
 package-lock.json
