@@ -3,12 +3,14 @@ import { reactRouter } from '@react-router/dev/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [reactRouter()],
+	plugins: [!process.env.VITEST && reactRouter()],
 	resolve: {
 		tsconfigPaths: true,
 	},
 	test: {
 		environment: 'jsdom',
 		globals: true,
+		setupFiles: ['./vitest.setup.ts'],
+		include: ['**/*.test.{ts,tsx}'],
 	},
 });
