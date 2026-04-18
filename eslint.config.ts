@@ -40,18 +40,18 @@ export default defineConfig([
 			},
 		},
 		rules: {
-			'import/no-unresolved': 'error',
 			'react/jsx-fragments': ['error', 'element'],
+			'import/no-unresolved': 'error',
+			'import/consistent-type-specifier-style': [
+				'error',
+				'prefer-top-level',
+			],
 			'@typescript-eslint/consistent-type-imports': [
 				'error',
 				{
 					prefer: 'type-imports',
 					fixStyle: 'separate-type-imports',
 				},
-			],
-			'import/consistent-type-specifier-style': [
-				'error',
-				'prefer-top-level',
 			],
 		},
 	},
