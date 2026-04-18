@@ -1,4 +1,3 @@
-// lib/components/atoms/button/index.stories.tsx
 import { Button } from '.';
 import type { Meta, StoryObj } from '@storybook/react';
 
