@@ -14,6 +14,7 @@ export default defineConfig([
 				...globals.browser,
 				...globals.node,
 				...globals.es2021,
+				...globals.vitest,
 			},
 		},
 	},
