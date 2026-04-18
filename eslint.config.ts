@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import _import from 'eslint-plugin-import';
 import jsxa11y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
@@ -9,6 +10,8 @@ import tseslint from 'typescript-eslint';
 export default defineConfig([
 	{
 		ignores: ['build/**', 'node_modules/**', '.react-router/**'],
+	},
+	{
 		languageOptions: {
 			globals: {
 				...globals.browser,
@@ -28,6 +31,7 @@ export default defineConfig([
 		],
 		plugins: {
 			import: _import,
+			react: react,
 		},
 		settings: {
 			'import/resolver': {
@@ -37,6 +41,7 @@ export default defineConfig([
 		},
 		rules: {
 			'import/no-unresolved': 'error',
+			'react/jsx-fragments': ['error', 'element'],
 			'@typescript-eslint/consistent-type-imports': [
 				'error',
 				{
