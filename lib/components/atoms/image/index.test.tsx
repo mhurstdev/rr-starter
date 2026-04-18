@@ -9,8 +9,8 @@ describe('Button', () => {
 	});
 
 	it('has no a11y violations', async () => {
-		const { container } = render(<Image src="sunset.jpg" />);
+		const { container } = render(<Image alt="A sunset" src="sunset.jpg" />);
 		const result = await axe(container);
-		expect(result).not.toHaveNoViolations();
+		expect(result).toHaveNoViolations();
 	});
 });
