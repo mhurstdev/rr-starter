@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom/vitest';
-import 'vitest-axe/extend-expect';
 import { afterAll, afterEach, beforeAll } from 'vitest';
 import * as vitestAxeMatchers from 'vitest-axe/matchers';
 import { server } from './msw';
