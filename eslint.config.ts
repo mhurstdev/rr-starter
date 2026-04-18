@@ -8,7 +8,7 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig([
 	{
-		ignores: ['build/**', 'node_modules/**'],
+		ignores: ['build/**', 'node_modules/**', '.react-router/**'],
 		languageOptions: {
 			globals: {
 				...globals.browser,
