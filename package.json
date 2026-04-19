@@ -10,6 +10,8 @@
 		"start": "react-router-serve ./build/server/index.js",
 		"format": "prettier . --write",
 		"lint": "eslint . --fix && stylelint '**/*.css' --fix",
+		"lint:ts": "eslint . --fix",
+		"lint:css": "stylelint '**/*.css' --fix",
 		"typecheck": "react-router typegen && tsc",
 		"prepare": "husky || true",
 		"test": "vitest --run",
