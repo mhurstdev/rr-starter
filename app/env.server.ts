@@ -3,7 +3,7 @@ import * as z from 'zod';
 
 export const env = createEnv({
 	server: {
-		SERVER_EXAMPLE: z.string().min(1),
+		SERVER_TEST: z.string(),
 	},
 	runtimeEnv: process.env,
 	emptyStringAsUndefined: true,
