@@ -45,7 +45,6 @@ export default defineConfig([
 			},
 		},
 		rules: {
-			'react/jsx-fragments': ['error', 'element'],
 			'import/no-unresolved': 'error',
 			'import/consistent-type-specifier-style': [
 				'error',
