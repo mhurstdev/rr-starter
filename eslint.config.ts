@@ -14,7 +14,8 @@ export default defineConfig([
 			'build/**',
 			'build-storybook/**',
 			'node_modules/**',
-			'.react-router/**',
+			'.tanstack/**',
+			'*.gen.ts',
 		],
 	},
 	{

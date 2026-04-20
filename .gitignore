@@ -2,7 +2,6 @@
 .env
 /node_modules/
 
-# React Router
-/.react-router/
+/.tanstack/
 /build/
 /build-storybook/
