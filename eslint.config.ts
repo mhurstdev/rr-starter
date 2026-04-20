@@ -3,6 +3,7 @@ import _import from 'eslint-plugin-import';
 import jsxa11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import testingLibrary from 'eslint-plugin-testing-library';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -27,6 +28,10 @@ export default defineConfig([
 		},
 	},
 	js.configs.recommended,
+	{
+		files: ['**/*.test.{ts,tsx}'],
+		extends: [testingLibrary.configs['flat/react']],
+	},
 	{
 		files: ['**/*.{ts,tsx}'],
 		extends: [
