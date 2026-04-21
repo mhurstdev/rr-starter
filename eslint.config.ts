@@ -46,7 +46,9 @@ export default defineConfig([
 		},
 		settings: {
 			'import/resolver': {
-				typescript: true,
+				typescript: {
+					aliasPaths: true,
+				},
 				node: true,
 			},
 		},
