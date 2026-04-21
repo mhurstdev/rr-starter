@@ -4,6 +4,6 @@ export default {
 	extends: [
 		'stylelint-config-standard',
 		'stylelint-config-css-modules',
-		'stylelint-config-idiomatic-order',
+		'stylelint-config-recess-order',
 	],
 };
