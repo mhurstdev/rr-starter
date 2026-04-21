@@ -3,3 +3,4 @@ build
 build-storybook
 node_modules
 README.md
+*.gen.ts

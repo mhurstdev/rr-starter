@@ -3,3 +3,4 @@ build-storybook/
 node_modules/
 .tanstack/
 package-lock.json
+*.gen.ts
