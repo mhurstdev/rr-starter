@@ -10,43 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ApiUsersRouteImport } from './routes/api.users'
+import { Route as ApiV1UsersRouteRouteImport } from './routes/api/v1/users/route'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiUsersRoute = ApiUsersRouteImport.update({
-  id: '/api/users',
-  path: '/api/users',
+const ApiV1UsersRouteRoute = ApiV1UsersRouteRouteImport.update({
+  id: '/api/v1/users',
+  path: '/api/v1/users',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/api/users': typeof ApiUsersRoute
+  '/api/v1/users': typeof ApiV1UsersRouteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/api/users': typeof ApiUsersRoute
+  '/api/v1/users': typeof ApiV1UsersRouteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/api/users': typeof ApiUsersRoute
+  '/api/v1/users': typeof ApiV1UsersRouteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/users'
+  fullPaths: '/' | '/api/v1/users'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/users'
-  id: '__root__' | '/' | '/api/users'
+  to: '/' | '/api/v1/users'
+  id: '__root__' | '/' | '/api/v1/users'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ApiUsersRoute: typeof ApiUsersRoute
+  ApiV1UsersRouteRoute: typeof ApiV1UsersRouteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +58,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/users': {
-      id: '/api/users'
-      path: '/api/users'
-      fullPath: '/api/users'
-      preLoaderRoute: typeof ApiUsersRouteImport
+    '/api/v1/users': {
+      id: '/api/v1/users'
+      path: '/api/v1/users'
+      fullPath: '/api/v1/users'
+      preLoaderRoute: typeof ApiV1UsersRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,7 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ApiUsersRoute: ApiUsersRoute,
+  ApiV1UsersRouteRoute: ApiV1UsersRouteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
