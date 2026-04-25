@@ -55,6 +55,7 @@
 		"@storybook/react": "^10.3.5",
 		"@storybook/react-vite": "^10.3.5",
 		"@tanstack/devtools-vite": "latest",
+		"@tanstack/eslint-plugin-router": "^1.161.6",
 		"@tanstack/router-cli": "^1.166.33",
 		"@testing-library/jest-dom": "^6.9.1",
 		"@testing-library/react": "^16.3.2",

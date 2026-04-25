@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import router from '@tanstack/eslint-plugin-router';
 import _import from 'eslint-plugin-import';
 import jsxa11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
@@ -39,6 +40,7 @@ export default defineConfig([
 			tseslint.configs.recommended,
 			reactHooks.configs.flat.recommended,
 			jsxa11y.flatConfigs.recommended,
+			router.configs['flat/recommended'],
 		],
 		plugins: {
 			import: _import,
