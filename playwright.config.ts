@@ -1,0 +1,26 @@
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({
+	testMatch: '**/testing/visual-regression/index.ts',
+	outputDir: './testing/visual-regression/results',
+	reporter: [
+		['html', { outputFolder: './testing/visual-regression/reports' }],
+	],
+	snapshotPathTemplate: './testing/visual-regression/snapshots/{arg}{ext}',
+	fullyParallel: true,
+	use: {
+		baseURL: 'http://localhost:6006',
+	},
+	projects: [
+		{ name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+		{ name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+		{ name: 'webkit', use: { ...devices['Desktop Safari'] } },
+		{ name: 'Mobile Chrome', use: { ...devices['Pixel 5'] } },
+		{ name: 'Mobile Safari', use: { ...devices['iPhone 15'] } },
+	],
+	webServer: {
+		command: 'npx http-server build-storybook --port 6006 --silent',
+		url: 'http://localhost:6006',
+		reuseExistingServer: false,
+	},
+});
